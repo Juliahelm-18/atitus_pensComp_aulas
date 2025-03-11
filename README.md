@@ -9,7 +9,6 @@ Exercícios de aula da disciplina de Pensamento Computacional.
 ## Sobre mim
 ### Júlia Helm
 - *Estudante* 
-
 - **primeiro semestre - CIC**
 
 ![legenda](https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSshMrvbvsS8yRRiRW9yuDu7Vxr5kKhdZHm5w&s)
