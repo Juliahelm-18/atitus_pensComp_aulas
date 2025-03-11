@@ -2,12 +2,17 @@
 
 - [Prof Matheus Jardim Bernardes](https://matheusjardimb.com/)
 - [Atitus.edu.br](https://atitus.edu.br/)
+  - [Júlia.helm](https://github.com/Juliahelm-18)
 
 Exercícios de aula da disciplina de Pensamento Computacional.
 
 ## Sobre mim
+### Júlia Helm
+- *Estudante* 
 
---PREENCHER--
+- **primeiro semestre - CIC**
+
+![legenda](https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSshMrvbvsS8yRRiRW9yuDu7Vxr5kKhdZHm5w&s)
 
 ## DICAS:
 
