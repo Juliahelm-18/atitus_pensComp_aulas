@@ -14,6 +14,9 @@ Exercícios de aula da disciplina de Pensamento Computacional.
 
 ![legenda](https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSshMrvbvsS8yRRiRW9yuDu7Vxr5kKhdZHm5w&s)
 
+#### Link tabela
+(https://github.com/Juliahelm-18/atitus_pensComp_aulas/blob/7f88951c8013d4280cd8a647b14e0184c84e1036/00_git/notas.md) 
+
 ## DICAS:
 
 - Entenda completamente o que o exercício solicita ANTES de começar a programar.
