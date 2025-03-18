@@ -12,7 +12,7 @@ def hora_para_segundo(valor):
 
 def dias_para_segundos(valor):
     pass
-    return hora_para_segundo(valor * 24)
+    return valor * 24 * 60 * 60
 
 assert hora_para_minuto(0) == 0
 assert hora_para_minuto(1) == 60
@@ -29,6 +29,5 @@ assert hora_para_segundo(2) == 7200  # 2 * 60 * 60
 assert dia_para_segundo(0) == 0
 assert dia_para_segundo(1) == 86.400
 assert dia_para_segundo(2) == 172.800
-
 
 print("Terminou com sucesso!")
