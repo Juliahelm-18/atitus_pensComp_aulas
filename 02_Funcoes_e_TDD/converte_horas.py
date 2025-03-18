@@ -10,7 +10,7 @@ def hora_para_segundo(valor):
     pass
     return valor * 60 * 60
 
-def dias_para_segundos(valor):
+def dia_para_segundo(valor):
     pass
     return valor * 24 * 60 * 60
 
