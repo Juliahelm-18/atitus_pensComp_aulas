@@ -1,17 +1,17 @@
 def hora_para_minuto(valor):
     # TODO: preencher
     pass
-
+    return valor * 60
 
 def minuto_para_segundo(valor):
     # TODO: preencher
     pass
-
+    return valor * 60
 
 def hora_para_segundo(valor):
     # TODO: preencher, deve usar minuto_para_segundo()
     pass
-
+    return valor * 3.600
 
 assert hora_para_minuto(0) == 0
 assert hora_para_minuto(1) == 60
