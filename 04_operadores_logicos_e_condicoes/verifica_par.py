@@ -1,14 +1,14 @@
 def eh_par(numero):
-    # Preencher
-    pass
+   if numero % 2 == 0:
+       return True
+   else:
+       return False
 
 
 def eh_impar(numero):
-    # Preencher
-    # Use a função anterior
-    pass
+      return not eh_par(numero):
 
-
+def test ():
 assert eh_par(0)
 assert eh_par(2)
 assert eh_par(4)
