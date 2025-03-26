@@ -7,6 +7,7 @@ def proximo_bissexto(ano):
    return not eh_bissexto(ano):
 
 def verificar_bissexto(ano):
+  ano = input("Digite um ano")
    if ano % 4 == 0:
       return True
    if ano % 4 == 3:
