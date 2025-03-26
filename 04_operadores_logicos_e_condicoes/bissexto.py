@@ -32,3 +32,7 @@ assert proximo_bissexto(2024) == 2024
 assert proximo_bissexto(2025) == 2028
 assert proximo_bissexto(2029) == 2032
 assert proximo_bissexto(2020) == 2020
+
+# Solucao do Professor
+def proximo_bissexto(ano):
+   return (ano + 3) // 4 * 4
