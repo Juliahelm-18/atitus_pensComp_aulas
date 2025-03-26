@@ -6,6 +6,10 @@ def eh_bissexto(ano):
 def proximo_bissexto(ano):
    return not eh_bissexto(ano):
 
+def verificar_bissexto(ano):
+   if ano % 4 == 0
+       return print
+
 def test():
 assert eh_bissexto(0)
 assert eh_bissexto(2020)
