@@ -12,14 +12,11 @@ def verificar_bissexto(ano):
       return True
       print("O ano é bissexto")
    if ano % 4 == 3:
-      return (ano + 1) True
-      print("O ano (ano + 1) será bissexto")
+      return ("O ano (ano + 1) será bissexto")
    if ano % 4 == 2:
-       return (ano + 2) True
-      print("O ano (ano + 2) será bissexto")
+       return ("O ano (ano + 2) será bissexto")
    if ano % 4 == 1:
-      return (ano + 3) True
-      print("O ano (ano + 3) será bissexto")
+      return ("O ano (ano + 3) será bissexto")
    
 
 def test():
