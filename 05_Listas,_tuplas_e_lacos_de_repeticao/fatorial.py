@@ -1,6 +1,4 @@
 def fatorial(numero):
-    # Preencher
-    pass
 
 
 assert fatorial(0) == 1
