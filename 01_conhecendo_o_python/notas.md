@@ -1,8 +1,6 @@
-idade_A = 19
-idade_B = 19
-idade_C = 21
-idade_D = 23
-idade_E = 12
-media = (idade_B + idade_A + idade_C + idade_D + idade_E) / 5
-
-print("A média é", media)
+ANO_ATUAL = 2025
+nome = input('Qual o seu nome?')
+sobrenome = input('Qual o seu sobrenome?')
+ano_nascimento = int(input('Que ano você nasceu?'))
+idade = ANO_ATUAL - ano_nascimento
+print('olá', nome, sobrenome, 'Bom dia, sua idade é', idade)
