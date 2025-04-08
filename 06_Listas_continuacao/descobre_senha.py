@@ -6,9 +6,8 @@ def senha(palpite):
     print("Senha errada")
     palpite = int(input("Digite um número entre 0 e 10"))
     tentativas += 1
-  if valor = senha:
-    print("Você acertou a senha!")
-    print(f"Essas foram suas tentativas {tentativas}")
+  print("Você acertou a senha!")
+  print(f"Essas foram suas tentativas {tentativas}")
 
 
 
