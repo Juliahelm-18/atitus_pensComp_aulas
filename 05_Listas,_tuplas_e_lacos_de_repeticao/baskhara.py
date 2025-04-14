@@ -5,7 +5,7 @@ def baskhara(a, b, c):
     if discriminante < 0:
         return False
     else:
-        return True
+        return x1 or x2
 
     if discrimante = 0:
         return "Não é possível realizar a equação"
