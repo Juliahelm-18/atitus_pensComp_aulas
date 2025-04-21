@@ -1,11 +1,33 @@
 def maior_numero(lista):
-    # Qual o maior número da lista.
-    pass
+  escolha = int(input("Escolha qual lista você deseja descobrir o maior número, 1, 2 ou 3: ")
+  if escolha < 1 and > 3:
+                return None
+  if escolha == 1:
+    maior_numero = max(lista_1)
+    print(f"O maior número é {maior_numero}")
+  elif escolha == 2
+      maior_numero = max(lista_2)
+    print(f"O maior número é {maior_numero}")
+  elif escolha == 3
+      maior_numero = max(lista_3)
+    print(f"O maior número é {maior_numero}")
+                
 
 
 def menor_numero(lista):
-    # Qual o menor número da lista.
-    pass
+  escolha = int(input("Escolha qual lista você deseja descobrir o maior número, 1, 2 ou 3: ")
+  if escolha < 1 and > 3:
+                return None
+  if escolha == 1:
+    menor_numero = min(lista_1)
+    print(f"O maior número é {maior_numero}")
+  elif escolha == 2
+      menor_numero = min(lista_2)
+    print(f"O maior número é {maior_numero}")
+  elif escolha == 3
+      menor_numero = min(lista_3)
+    print(f"O maior número é {menor_numero}")
+ 
 
 
 def numeros_pares(lista):
