@@ -17,7 +17,7 @@ def maior_numero(lista):
 def menor_numero(lista):
   escolha = int(input("Escolha qual lista você deseja descobrir o maior número, 1, 2 ou 3: ")
   if escolha < 1 and > 3:
-                return None
+                return None 
   if escolha == 1:
     menor_numero = min(lista_1)
     print(f"O maior número é {maior_numero}")
@@ -31,13 +31,55 @@ def menor_numero(lista):
 
 
 def numeros_pares(lista):
-    # Quais números são pares.
-    pass
+  escolha = int(input("Escolha qual lista você deseja descobrir o maior número, 1, 2 ou 3: ")
+  if escolha < 1 and > 3:
+                return None
+  if escolha == 1
+    numero_par = ""
+    for numero in lista_1:
+      if numero % 2 == 0:
+        numero_par += numero
+        print(f"Os números pares são {numero_par}")
+  if escolha == 2
+    numero_par = ""
+    for numero in lista_2:
+      if numero % 2 == 0:
+        numero_par += numero
+        print(f"Os números pares são {numero_par}")
+  if escolha == 3
+    numero_par = ""
+    for numero in lista_3:
+      if numero % 2 == 0:
+        numero_par += numero
+        print(f"Os números pares são {numero_par}")
+
+         
+        
+
 
 
 def numeros_impares(lista):
-    # Quais números são ímpares.
-    pass
+  escolha = int(input("Escolha qual lista você deseja descobrir o maior número, 1, 2 ou 3: ")
+  if escolha < 1 and > 3:
+                return None
+  if escolha == 1
+    numero_impar = ""
+    for numero in lista_1:
+      if numero % 2 != 0:
+        numero_impar += numero
+        print(f"Os números ímpares são {numero_impar}")
+  if escolha == 2
+    numero_impar = ""
+    for numero in lista_2:
+      if numero % 2 != 0:
+        numero_impar += numero
+        print(f"Os números ímpares são {numero_impar}")
+  if escolha == 3
+    numero_impar = ""
+    for numero in lista_3:
+      if numero % 2 == 0:
+        numero_impar += numero
+        print(f"Os números ímpares são {numero_impar}")
 
 
 def numeros_positivo(lista):
