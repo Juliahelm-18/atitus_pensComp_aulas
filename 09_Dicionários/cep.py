@@ -28,12 +28,15 @@ def obtem_dados_endereco(cep):
 
 
 def validador_cep(cep):
-    if len(cep) != 8 or len(cep) != 9:
+    if len (cep) == 9:
+       cep = cep.replace('-', '')
+    if len (cep) != 8
+       return False
+    try:
+       int(cep)
+       return True
+    except:
         return False
-    return True
-    if '""' in cep:
-        return False
-    return True
         
 
 
