@@ -7,6 +7,9 @@ def obtem_dados_endereco(cep):
     conn.request("GET", url)
     response = json.loads(conn.getresponse().read().decode())
     conn.close()
+
+    
+    
     # Exemplo de resposta
     # {
     #   'cep': '91110-000',
@@ -25,7 +28,13 @@ def obtem_dados_endereco(cep):
 
 
 def validador_cep(cep):
-    pass
+    if len(cep) != 8 or len(cep) != 9:
+        return False
+    return True
+    if '""' in cep:
+        return False
+    return True
+        
 
 
 def add_endereco(cache, endereco):
