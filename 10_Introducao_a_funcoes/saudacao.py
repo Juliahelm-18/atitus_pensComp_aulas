@@ -1,8 +1,10 @@
-def saudacao(nome, sobrenome, titulo):
+def saudacao(nome: str , sobrenome: str, titulo: str) -> str
     if titulo is None:
-        print('Olá Sr.' nome + sobrenome)
-    else:
-        print('Olá' titulo + nome + sobrenome)
+        return 'Olá, Sr.' nome + sobrenome
+    elif:
+        return 'Olá, ' titulo + nome + sobrenome
+    else: 
+        return 'Olá, ' titulo + nome
 
 
 def test():
