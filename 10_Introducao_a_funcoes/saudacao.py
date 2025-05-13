@@ -1,4 +1,4 @@
-def saudacao(nome, sobrenome, titulo='Prof'):
+def saudacao(nome, sobrenome, titulo):
     if titulo is None:
         print('Olá Sr.' nome + sobrenome)
     else:
