@@ -1,4 +1,4 @@
-def status_aluno(notas):
+def status_aluno(notas): 
     if None in notas:
         return False 
     
