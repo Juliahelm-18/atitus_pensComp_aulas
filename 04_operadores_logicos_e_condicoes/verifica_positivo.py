@@ -1,4 +1,4 @@
-def eh_positivo(numero):
+def eh_positivo(numero): 
     return numero > 0 
 
 def eh_negativo(numero):
