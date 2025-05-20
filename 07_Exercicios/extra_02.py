@@ -1,4 +1,4 @@
-def maior_numero(lista):
+def maior_numero(lista): 
   escolha = int(input("Escolha qual lista você deseja descobrir o maior número, 1, 2 ou 3: "))
   if escolha < 1 or escolha > 3:
     return None
