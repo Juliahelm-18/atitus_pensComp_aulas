@@ -1,4 +1,4 @@
-from typing import Optional
+from typing import Optional 
 
 def saudacao(nome: str, sobrenome: Optional[str] = None, titulo: str = 'Sr.'): -> str:
     if nome == '':    
