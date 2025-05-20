@@ -1,56 +1,117 @@
-def obtem_dados_endereco(cep):
-    import http.client
-    import json
+import http.client
+import json
 
-    url = f"/ws/{cep}/json/"
+LEN_CEP = 8
+
+
+def get_cep_data_from_api(val):
+    url = f"/ws/{val}/json/"
     conn = http.client.HTTPSConnection("viacep.com.br")
     conn.request("GET", url)
     response = json.loads(conn.getresponse().read().decode())
     conn.close()
-
-    
-    
-    # Exemplo de resposta
-    # {
-    #   'cep': '91110-000',
-    #   'logradouro': 'Avenida Assis Brasil',
-    #   'complemento': 'de 4000 a 6298 - lado par',
-    #   'unidade': '',
-    #   'bairro': 'São Sebastião',
-    #   'localidade': 'Porto Alegre',
-    #   'uf': 'RS',
-    #   'ibge': '4314902',
-    #   'gia': '',
-    #   'ddd': '51',
-    #   'siafi': '8801'
-    # }
     return response
 
 
+def is_cep_valid(val):
+    if len(val) != LEN_CEP:
+        return False
+    for char in val:
+        if not char.isdigit():
+            return False
+    return True
+
+
+def consuta_ceps_conhecidos(ceps_conhecidos, cep):
+    for uf in ceps_conhecidos.keys():
+        for localidade in ceps_conhecidos[uf].keys():
+            if cep in ceps_conhecidos[uf][localidade]:
+                return True
+    return False
+
+
+def main():
+    contador_consultas = 0
+    enderecos = {}
+
+    while True:
+        print("Você consultou um total de:", contador_consultas, "vezes")
+        print("Dados em memória: ", enderecos)
+        print()
+
+        cep = input("Digite o seu cep:")
+        if not is_cep_valid(cep):
+            print("CEP inválido")
+            continue
+
+        if consuta_ceps_conhecidos(enderecos, cep):
+            print("Já conhecemos este cep")
+            continue
+
+        contador_consultas += 1
+        response = get_cep_data_from_api(cep)
+
+        uf = response["uf"]
+        localidade = response["localidade"]
+
+        if uf in enderecos:
+            if localidade in enderecos[uf]:
+                enderecos[uf][localidade].append(cep)
+            else:
+                enderecos[uf][localidade] = [cep, ]
+        else:
+            enderecos[uf] = {localidade: [cep, ]}
+
+
+main()
+
+
 def validador_cep(cep):
-    if len (cep) == 9:
+    if len(cep) == 9:
        cep = cep.replace('-', '')
-    if len (cep) != 8
+    if len(cep) != 8
        return False
     try:
        int(cep)
        return True
     except:
         return False
-        
 
 
 def add_endereco(cache, endereco):
-    pass
+        uf = endereco.get('uf')
+    localidade = endereco.get('localidade')
+    cep = endereco.get('cep')
 
+    if uf is None or localidade is None:
+        dados_completos = obtem_dados_endereco(cep)
+        uf = dados_completos.get('uf', uf)
+        localidade = dados_completos.get('localidade', localidade)
+        cep = dados_completos.get('cep', cep)
 
-assert validador_cep("99110000")
-assert validador_cep("99110-000")
-assert not validador_cep("99110 000")
-assert not validador_cep("9911-0000")
-assert not validador_cep("99110000 ")
-assert not validador_cep(" 99110000")
-assert not validador_cep("9911000")
+    if uf is None or localidade is None or cep is None:
+        return cache
+
+    if uf not in cache:
+        cache[uf] = {}
+
+    if localidade not in cache[uf]:
+        cache[uf][localidade] = []
+
+    if cep not in cache[uf][localidade]:
+        cache[uf][localidade].append(cep)
+
+    return cache
+    
+
+def test():
+  assert validador_cep("99110000")
+  assert validador_cep("99110-000")
+  assert not validador_cep("99110 000")
+  assert not validador_cep("9911-0000")
+  assert not validador_cep("99110000 ")
+  assert not validador_cep(" 99110000")
+  assert not validador_cep("9911000")
 
 endereco_01 = {
     "cep": "91110-000",
@@ -64,8 +125,8 @@ endereco_02 = {
     "localidade": "Porto Alegre",
 }
 resposta_01 = {"RS": {"Porto Alegre": ["91110-000"]}}
-assert add_endereco({}, endereco_01) == resposta_01
-assert add_endereco(resposta_01, endereco_01) == resposta_01
-assert add_endereco(resposta_01, endereco_02) == {
+  assert add_endereco({}, endereco_01) == resposta_01
+  assert add_endereco(resposta_01, endereco_01) == resposta_01
+  assert add_endereco(resposta_01, endereco_02) == {
     "RS": {"Porto Alegre": ["91110-000", "90240-111"]}
 }
