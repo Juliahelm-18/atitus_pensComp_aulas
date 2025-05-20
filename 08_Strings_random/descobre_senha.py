@@ -1,4 +1,4 @@
-def advinha_senha(numero_sorteado, palpites):
+def advinha_senha(numero_sorteado, palpites): 
     respostas = []
     tentativas = 3
 
