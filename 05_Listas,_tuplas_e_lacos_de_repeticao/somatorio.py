@@ -1,4 +1,4 @@
-def somatorio(numero):
+def somatorio(numero): 
     if numero < 0:
         return  None
     resultado = 0
