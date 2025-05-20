@@ -5,7 +5,7 @@ def eh_par(numero):
         return False
 
 def eh_impar(numero):
-    return not eh_par(numero):
+    return not eh_par(numero)
 
 def test():
     assert eh_par(0)
