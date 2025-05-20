@@ -1,4 +1,4 @@
-def descobre_senha(senha_secreta, total_tentativas):
+def descobre_senha(senha_secreta, total_tentativas): 
     tentativas = 0
     for tentativa in total_tentativas:
         if tentativa < 1 or tentativa > 10:
