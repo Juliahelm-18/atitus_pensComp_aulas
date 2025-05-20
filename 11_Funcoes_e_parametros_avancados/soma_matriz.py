@@ -1,4 +1,4 @@
-def soma_matriz(matriz, alvo):
+def soma_matriz(matriz, alvo): 
         lista_par = []
     for linha in matriz:
         for numero in linha:
