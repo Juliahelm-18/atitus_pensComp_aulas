@@ -1,4 +1,4 @@
-def ordena_lista(lista):
+def ordena_lista(lista): 
     for i in range (len(lista)):
         for x in range (len(lista)-1):
             if lista[x] > lista[j+1]
