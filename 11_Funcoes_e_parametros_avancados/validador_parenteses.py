@@ -1,5 +1,5 @@
 def validador_parenteses(entrada: str) -> bool:
-    parenteses_a = ''
+    parenteses_a = '' 
     parenteses_b = ''
 
     for x in entrada:
