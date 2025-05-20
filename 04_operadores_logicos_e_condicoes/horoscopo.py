@@ -1,4 +1,4 @@
-def horoscopo(mes):  
+def horoscopo(mes):   
     if mes <= 0 or mes > 12:
         return None
     if mes > 0:
