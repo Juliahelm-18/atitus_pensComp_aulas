@@ -1,4 +1,4 @@
-def letra_em_texto(texto, letra):
+def letra_em_texto(texto, letra): 
   texto = input("Digite um texto: ")
   letra = input("Qual letra você deseja achar?")
   posicao = texto.find(letra)
