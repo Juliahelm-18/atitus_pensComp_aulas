@@ -30,6 +30,9 @@ def test():
    assert proximo_bissexto(2029) == 2032
    assert proximo_bissexto(2020) == 2020
 
+print(eh_bissexto(2020))
+print(proximo_bissexto(2032))
+
 # solucao_do_professor
 # def eh_bissexto(ano):
 #     return (ano % 4) == 0
