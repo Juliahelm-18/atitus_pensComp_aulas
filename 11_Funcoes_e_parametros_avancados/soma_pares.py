@@ -1,4 +1,4 @@
-def soma_pares(numeros: list, alvo: int) -> bool:
+def soma_pares(numeros: list, alvo: int) -> bool: 
         for lista in numeros:
         x = lista
         for i in numeros:
