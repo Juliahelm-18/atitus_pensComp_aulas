@@ -1,4 +1,4 @@
-NUMEROS = ("0123456789")
+NUMEROS = ("0123456789") 
 
 def obtem_dados_endereco(cep):
     import http.client
