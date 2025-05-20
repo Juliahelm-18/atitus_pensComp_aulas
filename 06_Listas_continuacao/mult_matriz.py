@@ -1,4 +1,4 @@
-def multiply_matrix_by_scalar(matrix, scalar):
+def multiply_matrix_by_scalar(matrix, scalar): 
     result = []
     for row in matrix:
         new_row = [element * scalar for element in row]
