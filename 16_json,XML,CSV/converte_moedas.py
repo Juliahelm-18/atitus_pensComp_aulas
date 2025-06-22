@@ -11,9 +11,12 @@ def get_response(coin_a: str, coin_b: str) -> dict:
 
 
 def get_exchange_rate(coin_a: str, coin_b: str) -> float:
-    # response = get_questions(coin_a, coin_b)
-    pass
+    response = get_response(coin_a, coin_b)
+    return float(response["data"]["amount"])
+
 
 
 def get_new_value(coin_a: str, coin_b: str, value: float) -> float:
-    pass
+    rate = get_exchange_rate(coin_a, coin_b)
+    return value * rate
+
