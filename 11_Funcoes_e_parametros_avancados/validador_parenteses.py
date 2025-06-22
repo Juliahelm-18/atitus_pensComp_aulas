@@ -20,8 +20,7 @@ def test():# Valores válidos
     assert validador_parenteses("(())")
     assert validador_parenteses("(()()())")
     assert validador_parenteses("(((())()))")
-
-def test():# Valores inválidos
+# Valores inválidos
     assert validador_parenteses(")")
     assert validador_parenteses("(")
     assert validador_parenteses("()(")
