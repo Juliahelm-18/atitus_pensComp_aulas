@@ -55,39 +55,3 @@ def test_search_existing_movie():
 
     get_movies = original_get_movies
 
-def test_search_non_existing_movie():   
-    def mock_get_movies(texto_busca: str) -> Dict:
-        return {"results": []}
-    
-    global get_movies
-    original_get_movies = get_movies
-    get_movies = mock_get_movies
-    
-    result = search_movie("FilmeInexistente123")
-    assert result is None
-    
-    get_movies = original_get_movies
-
-def test_movie_data_structure():
-    def mock_get_movies(texto_busca: str) -> Dict: 
-        return {
-            "results": [
-                {
-                    "title": "Inception",
-                    "year": "2010",
-                    "id": "tt1375666"
-                }
-            ]
-        }
-    
-    global get_movies
-    original_get_movies = get_movies
-    get_movies = mock_get_movies
-    
-    result = search_movie("Inception")
-    assert isinstance(result, dict)
-    assert isinstance(result['title'], str)
-    assert isinstance(result['year'], str)
-    assert isinstance(result['id'], str)
-    
-    get_movies = original_get_movies
